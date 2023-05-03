@@ -14,6 +14,7 @@ abstract class ContactDatabase:RoomDatabase() {
 
 //Singleton Pattern
     companion object{
+        @Volatile
         private var INSTANCE:ContactDatabase?=null
 
         fun getDatabase(context: Context):ContactDatabase{
